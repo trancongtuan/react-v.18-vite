@@ -1,7 +1,7 @@
 {
-  "name": "vite-react-ts",
+  "name": "tuantc",
   "version": "0.0.0",
-  "description": "React Typescript Starter Template with Vite",
+  "description": "react template with Vite",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/uchihamalolan/vite-react-ts.git"
@@ -12,7 +12,7 @@
     "starter",
     "template"
   ],
-  "author": "Malolan B. <uchihamalolan@gmail.com> (https://twitter.com/malolan12)",
+  "author": "tuantc",
   "license": "MIT",
   "homepage": "https://github.com/uchihamalolan/vite-react-ts",
   "scripts": {
