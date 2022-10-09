@@ -1,14 +1,17 @@
-import { Header } from 'components/Header';
-import { Button } from 'components/Button';
-import { ReactComponent as Logo } from 'assets/favicon.svg';
+import { RouterProvider } from 'react-router-dom';
+import router from 'router';
+import { QueryClientProvider, QueryClient } from 'react-query';
+import { ReactQueryDevtools } from 'react-query/devtools';
+
+const queryClient = new QueryClient();
 
 function App() {
   return (
     <div className="App">
-      <Header title="hola" />
-      <Logo height={100} width={100} />
-      <Button onClick={() => alert('tuan tran')}>Heyo</Button>
-      <div className="flex flex-wrap"></div>
+      <QueryClientProvider client={queryClient}>
+        <RouterProvider router={router} />
+        <ReactQueryDevtools initialIsOpen={false} />
+      </QueryClientProvider>
     </div>
   );
 }

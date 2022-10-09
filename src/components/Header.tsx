@@ -1,3 +1,19 @@
-export function Header({ title }: { title: string }) {
-  return <h1 className="text-5xl">{title}</h1>;
+import { Link } from 'react-router-dom';
+
+// eslint-disable-next-line import/no-unused-modules
+export function Header() {
+  return (
+    <>
+      <nav>
+        <ul>
+          <li>
+            <Link to={`contact`}>Your Name</Link>
+          </li>
+          <li>
+            <Link to={`service`}>Your Friend</Link>
+          </li>
+        </ul>
+      </nav>
+    </>
+  );
 }
