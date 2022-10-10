@@ -46,7 +46,7 @@ function Main({ children }: { children: any }) {
             trigger={null}
             width={250}
             theme="light"
-            className={`sider-primary ant-layout-sider-primary active-route`}
+            className={`sider-primary ant-layout-sider-primary`}
             style={{ background: sidenavType }}
           >
             <Sidenav color={sidenavColor} />
@@ -62,7 +62,7 @@ function Main({ children }: { children: any }) {
         trigger={null}
         width={250}
         theme="light"
-        className={`sider-primary ant-layout-sider-primary active-route`}
+        className={`sider-primary ant-layout-sider-primary`}
         style={{ background: sidenavType }}
       >
         <Sidenav color={sidenavColor} />
