@@ -7,7 +7,7 @@ function App() {
     <div className="App">
       <Header title="hola" />
       <Logo height={100} width={100} />
-      <Button onClick={() => alert('tuan tran')}>Heyo</Button>
+      <Button onClick={() => alert('tuan tran')}>Heyoh</Button>
       <div className="flex flex-wrap"></div>
     </div>
   );
