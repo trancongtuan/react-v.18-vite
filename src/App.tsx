@@ -1,14 +1,27 @@
-import { Header } from 'components/Header';
-import { Button } from 'components/Button';
-import { ReactComponent as Logo } from 'assets/favicon.svg';
+import { QueryClientProvider, QueryClient } from 'react-query';
+import { ReactQueryDevtools } from 'react-query/devtools';
+import { BrowserRouter, Switch, Route, Redirect } from 'react-router-dom';
+import Home from './pages/Home';
+import Main from './layout/Main';
+import 'antd/dist/antd.css';
+import './assets/styles/main.css';
+import './assets/styles/responsive.css';
 
+const queryClient = new QueryClient();
 function App() {
   return (
     <div className="App">
-      <Header title="hola" />
-      <Logo height={100} width={100} />
-      <Button onClick={() => alert('tuan tran')}>Heyoh</Button>
-      <div className="flex flex-wrap"></div>
+      <QueryClientProvider client={queryClient}>
+        <BrowserRouter>
+          <Switch>
+            <Main>
+              <Route exact path="/dashboard" component={Home} />
+              <Redirect from="*" to="/dashboard" />
+            </Main>
+          </Switch>
+        </BrowserRouter>
+        <ReactQueryDevtools initialIsOpen={false} />
+      </QueryClientProvider>
     </div>
   );
 }
